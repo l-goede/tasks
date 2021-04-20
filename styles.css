@@ -1,8 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300;400&display=swap");
 *,
 *::after,
 *::before {
   box-sizing: border-box;
 }
+:root {
+  --primarycolor: #fe4775;
+  --secondarycolor: #161060;
+  --primarytext: #111111;
+  --headlinecolor: #393939;
+  --alternativetext: #ffffff;
+
+  --primary-font-family: "Montserrat", sans-serif;
+  --secondary-text-color: "Roboto", sans-serif;
+}
+
 html {
   font-size: 16px;
+}
+body {
+  background: var(--primarycolor);
 }
