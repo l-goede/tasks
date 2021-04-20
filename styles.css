@@ -1,10 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+* {
+  font-weight: lighter;
+  letter-spacing: 0.1em;
+}
 *,
 *::after,
 *::before {
   box-sizing: border-box;
 }
+
 :root {
   --primarycolor: #fe4775;
   --secondarycolor: #161060;
@@ -12,10 +16,64 @@
   --headlinecolor: #393939;
   --alternativetext: #ffffff;
 
-  --primary-font-family: "Montserrat", sans-serif;
-  --secondary-text-color: "Roboto", sans-serif;
+  --primary-font-family: "Roboto", sans-serif;
+  --secondary-text-color: "Montserrat", sans-serif;
 }
 
 html {
   font-size: 16px;
+}
+/*general*/
+form {
+  display: grid;
+  grid-auto-flow: row;
+  font-family: var(--primary-font-family);
+  margin: 2.25em;
+}
+/*add new*/
+
+h2 {
+  color: var(--headlinecolor);
+  font-size: 3.9em;
+}
+
+/*enter task - enter field*/
+.entertask {
+  font-size: 3.9em;
+  color: rgba(57, 57, 57, 0.21);
+  border: none;
+  border-bottom: solid 4px rgba(52, 45, 47, 0.37);
+  padding-bottom: 0.5em;
+  letter-spacing: 0.01em;
+}
+/* when*/
+h3 {
+  color: var(--headlinecolor);
+  letter-spacing: 0.25em;
+  font-weight: lighter;
+}
+/* radio buttons*/
+.radio {
+  background: rgba(213, 213, 213, 0.1);
+  font-size: 1.3em;
+  font-weight: lighter;
+  letter-spacing: 0.01em;
+  padding: 2em;
+  justify-content: center;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label {
+  cursor: pointer;
+}
+
+/*add task button*/
+.addtask {
+  background: var(--primarycolor);
+  border: none;
+  color: var(--alternativetext);
+  padding: 1.9em 8.91rem;
+  font-size: 2rem;
+  font-weight: lighter;
 }

@@ -10,16 +10,22 @@
   <body>
     <form action="">
       <h2>Add new</h2>
-      <input type="text" placeholder="Enter Task" />
-      <h3>When</h3>
-      <label>Today <input type="radio" name="date" value="today" /> </label>
-      <label>
-        Tomorrow <input type="radio" name="date" value="tomorrow" />
-      </label>
-      <label
-        >Select Date <input type="radio" name="date" value="selectDate" />
-      </label>
-      <input type="submit" value="Add Task" />
+      <input type="text" placeholder="Enter Task" class="entertask" />
+      <h3>WHEN</h3>
+
+      <section class="radio">
+        <input type="radio" name="date" value="today" id="today" />
+        <label for="today">Today</label>
+
+        <input type="radio" name="date" value="tomorrow" id="tomorrow" />
+        <label for="tomorrow">Tomorrow</label>
+
+        <input type="radio" name="date" value="selectDate" id="selectdate" />
+        <label for="selectdate">Select Date</label>
+      </section>
+      <section class="addtask">
+        <input class="addtask" type="submit" value="Add Task" />
+      </section>
     </form>
   </body>
 </html>
