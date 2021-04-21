@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+* {
+  font-weight: lighter;
+  letter-spacing: 0.1em;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --primarycolor: #fe4775;
+  --secondarycolor: #161060;
+  --primarytext: #111111;
+  --headlinecolor: #393939;
+  --alternativetext: #ffffff;
+
+  --primary-font-family: "Roboto", sans-serif;
+  --secondary-text-color: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  font-weight: lighter;
+  font-family: va(--primary-font-family);
+  height: 100vh;
+  display: grid;
