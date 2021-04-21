@@ -1,10 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+* {
+  font-weight: lighter;
+  letter-spacing: 0.1em;
+}
 *,
 *::after,
 *::before {
   box-sizing: border-box;
 }
+
 :root {
   --primarycolor: #fe4775;
   --secondarycolor: #161060;
@@ -12,13 +16,79 @@
   --headlinecolor: #393939;
   --alternativetext: #ffffff;
 
-  --primary-font-family: "Montserrat", sans-serif;
-  --secondary-text-color: "Roboto", sans-serif;
+  --primary-font-family: "Roboto", sans-serif;
+  --secondary-text-color: "Montserrat", sans-serif;
 }
 
 html {
   font-size: 16px;
 }
 body {
+  margin: 0;
+  font-weight: lighter;
+  font-family: va(--primary-font-family);
+  height: 100vh;
+  display: grid;
+}
+/*BLOCK*/
+.form {
+  display: grid;
+  align-content: center;
+  font-family: var(--primary-font-family);
+  row-gap: 3em;
+  grid-template: auto auto auto auto 1fr / 1em 1fr;
+}
+/*element1:add new*/
+
+.form__title {
+  color: var(--headlinecolor);
+  font-size: 1em;
+  grid-column: 2/3;
+}
+
+/*enter task - enter field*/
+input[type="text"].form__input {
+  color: var(--secondary-text-color);
+  border: none;
+  border-bottom: solid 4px rgba(52, 45, 47, 0.38);
+  padding-bottom: 0.5em;
+  letter-spacing: 0.01em;
+  grid-column: 2/3;
+}
+
+input[type="text"]::placeholder {
+  color: #393939;
+  opacity: 21%;
+}
+
+/* when*/
+h3 {
+  color: var(--headlinecolor);
+  letter-spacing: 0.25em;
+  grid-column: 2/3;
+}
+
+/* radio buttons*/
+.radio-group {
+  background: rgba(213, 213, 213, 0.1);
+  font-size: 1.3em;
+  letter-spacing: 0.01em;
+  grid-column: 2/3;
+}
+input[type="radio"] {
+  visibility: hidden;
+}
+input[type="radio"] + label {
+  cursor: pointer;
+}
+input[type="radio"]:checked + label {
+  color: var(--primarycolor);
+}
+
+/*add task button*/
+input[type="submit"].submit {
   background: var(--primarycolor);
+  border: none;
+  color: var(--alternativetext);
+  grid-column: 1/3;
 }
