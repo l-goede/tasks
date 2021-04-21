@@ -8,24 +8,52 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <form action="">
-      <h2>Add new</h2>
-      <input type="text" placeholder="Enter Task" class="entertask" />
-      <h3>WHEN</h3>
+    <!-- start block -->
+    <form action="" class="form">
+      <!-- element 1 -->
+      <h2 class="form__title">Add new</h2>
+      <!-- element 2 -->
+      <input type="text" placeholder="Enter Task" class="form__input" />
+      <!-- element 3 -->
+      <h3 class="form__title">WHEN</h3>
+      <!-- end block -->
 
-      <section class="radio">
-        <input type="radio" name="date" value="today" id="today" />
-        <label for="today">Today</label>
+      <!-- start radio block -->
 
-        <input type="radio" name="date" value="tomorrow" id="tomorrow" />
-        <label for="tomorrow">Tomorrow</label>
+      <section class="radio-group">
+        <label>
+          <input
+            type="radio"
+            name="date"
+            value="today"
+            class="radio-group__input"
+          />
+          <span>Today</span></label
+        >
 
-        <input type="radio" name="date" value="selectDate" id="selectdate" />
-        <label for="selectdate">Select Date</label>
+        <label>
+          <input
+            type="radio"
+            name="date"
+            value="tomorrow"
+            class="radio-group__input"
+          />
+          <span>Tomorrow</span></label
+        >
+
+        <label>
+          <input
+            type="radio"
+            name="date"
+            value="selectDate"
+            class="radio-group__input"
+          />
+          <span>Select Date</span></label
+        >
       </section>
-      <section class="addtask">
-        <input class="addtask" type="submit" value="Add Task" />
-      </section>
+      <!-- end radio block -->
+
+      <input class="submit" type="submit" value="Add Task" />
     </form>
   </body>
 </html>
