@@ -26,7 +26,79 @@ html {
 body {
   margin: 0;
   font-weight: lighter;
-  font-family: va(--primary-font-family);
+  font-family: var(--primary-font-family);
   height: 100vh;
   display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 2em;
+}
+button {
+  border: none;
+  background: none;
+}
+/* BLOCK RADIO */
+.radio-group {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+.radio-group__input {
+  opacity: 0;
+  position: absolute;
+}
+.radio-group__title {
+  cursor: pointer;
+}
+
+.radio-group__input:checked + .radio-group__title {
+  color: var(--primarycolor);
+}
+.radio-group__input:not(:checked) + .radio-group__title {
+  opacity: 21%;
+}
+/* END BLOCK RADIO */
+
+/* BLOCK TASKS */
+
+.checkbox-group {
+  background: rgba(212, 212, 212, 0.1);
+  display: grid;
+  grid-area: 2/2/3/4;
+  padding-top: 3em;
+  padding-right: 3em;
+  hyphens: auto;
+  text-align: justify;
+}
+.checkbox-group__input {
+  opacity: 0;
+  padding-left: 1em;
+  padding-right: 3em;
+  text-align: justify;
+}
+.checkbox-group__title {
+  cursor: pointer;
+}
+
+.radio-group:checked + span {
+  text-decoration: line-through;
+  color: var(--primarycolor);
+}
+.strikethrough:checked {
+  text-decoration: line-through;
+}
+/* END BLOCK TASKS */
+.menu {
+  display: grid;
+  align-content: start;
+}
+h2 {
+  display: grid;
+  align-content: center;
+  font-size: 3em;
+}
+.bell {
+  padding-right: 2em;
 }

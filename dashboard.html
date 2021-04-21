@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dashboard</title>
+    <link rel="stylesheet" href="stylesdash.css" />
   </head>
   <body>
     <!-- start buttons top -->
-    <button></button>
+    <button class="menu"><img src="./assets/menu.svg" alt="menu" /></button>
     <h2>Tasks</h2>
-    <button></button>
+    <button class="bell"><img src="./assets/bell.svg" alt="bell" /></button>
     <!-- end buttons top -->
     <!-- start block dates -->
     <section class="radio-group">
@@ -21,7 +22,7 @@
           value="today"
           class="radio-group__input"
         />
-        <span>TODAY</span></label
+        <span class="radio-group__title">TODAY</span></label
       >
 
       <label>
@@ -31,7 +32,7 @@
           value="tomorrow"
           class="radio-group__input"
         />
-        <span>TOMORROW</span></label
+        <span class="radio-group__title">TOMORROW</span></label
       >
 
       <label>
@@ -41,7 +42,7 @@
           value="selectDate"
           class="radio-group__input"
         />
-        <span>THIS WEEK</span></label
+        <span class="radio-group__title">THIS WEEK</span></label
       >
     </section>
 
@@ -49,29 +50,40 @@
     <!-- start block tasks -->
     <section class="checkbox-group">
       <label>
-        <input type="checkbox" value="tasklist" class="checkbox-group__input" />
-        <span>Book appointment with</span></label
+        <input type="checkbox" class="checkbox-group__input" />
+        <span class="checkbox-group__title">Book appointment with</span></label
       >
 
       <label>
-        <input type="checkbox" value="tasklist" class="checkbox-group__input" />
-        <span>Upload today shot on dribble</span></label
+        <input type="checkbox" class="checkbox-group__input" />
+        <span class="checkbox-group__title"
+          >Upload today shot on dribble</span
+        ></label
       >
 
       <label>
-        <input type="checkbox" value="tasklist" class="checkbox-group__input" />
-        <span>Complete the elephant illustration</span></label
+        <input type="checkbox" class="checkbox-group__input" />
+        <span class="checkbox-group__title"
+          >Complete the elephant illustration</span
+        ></label
       >
       <label>
-        <input type="checkbox" value="tasklist" class="checkbox-group__input" />
-        <span>Buy cake for Claire's birthday</span></label
+        <input type="checkbox" class="checkbox-group__input" />
+        <span class="checkbox-group__title"
+          >Buy cake for Claire's birthday</span
+        ></label
       >
       <label>
-        <input type="checkbox" value="tasklist" class="checkbox-group__input" />
-        <span>Attend UX conference with Jared</span></label
+        <input type="checkbox" class="checkbox-group__input" />
+        <span class="checkbox-group__title"
+          >Attend UX conference with Jared</span
+        ></label
       >
       <!-- start buttons bottom -->
-      <button></button>
+      <div class="addtask">
+        <a xhref="/new.html"><img src="./assets/new_button.svg" /></a>
+      </div>
+
       <!-- start buttons bottom -->
     </section>
     <!-- end block checkbox -->
