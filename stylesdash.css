@@ -27,16 +27,25 @@ body {
   margin: 0;
   font-weight: lighter;
   font-family: var(--primary-font-family);
+}
+.dashboard {
   height: 100vh;
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto auto fr;
+  grid-template-columns: auto auto 1fr;
   grid-gap: 2em;
 }
-button {
-  border: none;
-  background: none;
+
+.menu {
+  grid-column: 1/4;
+  justify-self: start;
 }
+
+.task {
+  grid-column: 2/3;
+  align-self: center;
+}
+
 /* BLOCK RADIO */
 .radio-group {
   display: flex;
@@ -65,10 +74,7 @@ button {
 
 .checkbox-group {
   background: rgba(212, 212, 212, 0.1);
-  display: grid;
-  grid-area: 2/2/3/4;
   padding-top: 3em;
-  padding-right: 3em;
   hyphens: auto;
   text-align: justify;
 }
@@ -76,29 +82,17 @@ button {
   opacity: 0;
   padding-left: 1em;
   padding-right: 3em;
-  text-align: justify;
 }
 .checkbox-group__title {
   cursor: pointer;
+  display: table-row;
 }
 
-.radio-group:checked + span {
+.checkbox-group__input:checked + .checkbox-group__title {
   text-decoration: line-through;
-  color: var(--primarycolor);
+  text-decoration-color: var(--primarycolor);
 }
-.strikethrough:checked {
-  text-decoration: line-through;
+.addtask {
+  grid-column: 3/4;
 }
 /* END BLOCK TASKS */
-.menu {
-  display: grid;
-  align-content: start;
-}
-h2 {
-  display: grid;
-  align-content: center;
-  font-size: 3em;
-}
-.bell {
-  padding-right: 2em;
-}

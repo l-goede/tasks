@@ -8,84 +8,93 @@
     <link rel="stylesheet" href="stylesdash.css" />
   </head>
   <body>
-    <!-- start buttons top -->
-    <button class="menu"><img src="./assets/menu.svg" alt="menu" /></button>
-    <h2>Tasks</h2>
-    <button class="bell"><img src="./assets/bell.svg" alt="bell" /></button>
-    <!-- end buttons top -->
-    <!-- start block dates -->
-    <section class="radio-group">
-      <label>
-        <input
-          type="radio"
-          name="date"
-          value="today"
-          class="radio-group__input"
-        />
-        <span class="radio-group__title">TODAY</span></label
-      >
+    <main class="dashboard">
+      <!-- start buttons top -->
+      <button class="menu">
+        <img src="./assets/menu.svg" alt="menu" />
+      </button>
+      <h2 class="task">Tasks</h2>
+      <button class="bell">
+        <img src="./assets/bell.svg" alt="bell" />
+      </button>
 
-      <label>
-        <input
-          type="radio"
-          name="date"
-          value="tomorrow"
-          class="radio-group__input"
-        />
-        <span class="radio-group__title">TOMORROW</span></label
-      >
+      <!-- end buttons top -->
+      <!-- start block dates -->
+      <section class="radio-group">
+        <label>
+          <input
+            type="radio"
+            name="date"
+            value="today"
+            class="radio-group__input"
+          />
+          <span class="radio-group__title">TODAY</span></label
+        >
 
-      <label>
-        <input
-          type="radio"
-          name="date"
-          value="selectDate"
-          class="radio-group__input"
-        />
-        <span class="radio-group__title">THIS WEEK</span></label
-      >
-    </section>
+        <label>
+          <input
+            type="radio"
+            name="date"
+            value="tomorrow"
+            class="radio-group__input"
+          />
+          <span class="radio-group__title">TOMORROW</span></label
+        >
 
-    <!-- end block dates -->
-    <!-- start block tasks -->
-    <section class="checkbox-group">
-      <label>
-        <input type="checkbox" class="checkbox-group__input" />
-        <span class="checkbox-group__title">Book appointment with</span></label
-      >
+        <label>
+          <input
+            type="radio"
+            name="date"
+            value="selectDate"
+            class="radio-group__input"
+          />
+          <span class="radio-group__title">THIS WEEK</span></label
+        >
+      </section>
 
-      <label>
-        <input type="checkbox" class="checkbox-group__input" />
-        <span class="checkbox-group__title"
-          >Upload today shot on dribble</span
-        ></label
-      >
+      <!-- end block dates -->
+      <!-- start block tasks -->
+      <section class="checkbox-group">
+        <label>
+          <input type="checkbox" class="checkbox-group__input" />
+          <span class="checkbox-group__title"
+            >Book appointment with Jared</span
+          ></label
+        >
 
-      <label>
-        <input type="checkbox" class="checkbox-group__input" />
-        <span class="checkbox-group__title"
-          >Complete the elephant illustration</span
-        ></label
-      >
-      <label>
-        <input type="checkbox" class="checkbox-group__input" />
-        <span class="checkbox-group__title"
-          >Buy cake for Claire's birthday</span
-        ></label
-      >
-      <label>
-        <input type="checkbox" class="checkbox-group__input" />
-        <span class="checkbox-group__title"
-          >Attend UX conference with Jared</span
-        ></label
-      >
-      <!-- start buttons bottom -->
-      <div class="addtask">
-        <a xhref="/new.html"><img src="./assets/new_button.svg" /></a>
-      </div>
+        <label>
+          <input type="checkbox" class="checkbox-group__input" />
+          <span class="checkbox-group__title"
+            >Upload today shot on dribble</span
+          ></label
+        >
 
-      <!-- start buttons bottom -->
-    </section>
-    <!-- end block checkbox -->
+        <label>
+          <input type="checkbox" class="checkbox-group__input" />
+          <span class="checkbox-group__title"
+            >Complete the elephant illustration</span
+          ></label
+        >
+        <label>
+          <input type="checkbox" class="checkbox-group__input" />
+          <span class="checkbox-group__title"
+            >Buy cake for Claire's birthday</span
+          ></label
+        >
+        <label>
+          <input type="checkbox" class="checkbox-group__input" />
+          <span class="checkbox-group__title"
+            >Attend UX conference with Jared</span
+          ></label
+        >
+        <!-- start buttons bottom -->
+        <section class="addtask">
+          <a href="/new.html"><img src="./assets/new_button.svg" /></a>
+        </section>
+
+        <!-- end buttons bottom -->
+      </section>
+      <!-- end block checkbox -->
+    </main>
   </body>
 </html>
