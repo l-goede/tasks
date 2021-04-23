@@ -101,7 +101,6 @@ body {
 
 .checkbox-group {
   grid-column: 2/4;
-  display: grid;
   background: rgba(212, 212, 212, 0.1);
   font-size: 1.3em;
   overflow: auto;
@@ -109,6 +108,7 @@ body {
   padding: 3em 1em;
   row-gap: 3em;
   height: 1fr;
+  display: grid;
 }
 
 .checkbox-group__input {
