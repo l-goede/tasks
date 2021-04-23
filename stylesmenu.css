@@ -34,7 +34,7 @@ body {
   grid-template-columns: auto 1fr auto;
 }
 
-.dashboard__menu {
+.checkbox-group-m {
   grid-column: 1/4;
   justify-self: start;
   background: none;
@@ -59,7 +59,8 @@ body {
   justify-self: end;
 }
 .dashboard__addtask {
-  grid-column: 3/4;
+  grid-column: 3;
+  grid-row: 4;
   background: var(--primarycolor);
   padding: 2em 3em;
   display: grid;
@@ -99,14 +100,15 @@ body {
 /* BLOCK TASKS */
 
 .checkbox-group {
-  grid-column: 2/4;
-  background: rgba(212, 212, 212, 0.1);
+  grid-column: 2/6;
+  grid-row: 3/6;
+  background: rgba(200, 200, 200, 0.1);
   font-size: 1.3em;
   overflow: auto;
   align-content: start;
-  padding: 3em 1em;
-  row-gap: 3em;
-  height: 1fr;
+  padding: 2em 2em;
+  row-gap: 2em;
+  /* height: 1fr; */
   display: grid;
 }
 
@@ -167,3 +169,30 @@ body {
   padding-left: 0;
   align-self: start;
 }
+
+.checkbox-group-m__input {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  width: 2em;
+  height: 2em;
+}
+
+
+.checkbox-group-m {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  .checkbox-group-minput:checked ~ .main-menu__slider {
+    transform: none;
+  }
+  .main-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    z-index: 2;
+    transform: translateX(-310px);
+    transition: transform 0.3s;
