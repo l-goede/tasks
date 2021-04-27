@@ -80,13 +80,13 @@ h3 {
   letter-spacing: 0.01em;
   grid-column: 2/3;
 }
-input[type="radio"] {
+.radio-group__input {
   visibility: hidden;
 }
-input[type="radio"] + label {
+.radio-group__input + .radio-group__title {
   cursor: pointer;
 }
-input[type="radio"]:checked + label {
+.radio-group__input:checked + .radio-group__title {
   color: var(--primarycolor);
 }
 
