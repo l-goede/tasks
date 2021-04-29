@@ -30,64 +30,76 @@ body {
   height: 100vh;
   display: grid;
 }
-/*BLOCK*/
+/*BLOCK FORM*/
 .form {
   display: grid;
   align-content: center;
   font-family: var(--primary-font-family);
-
-  grid-template: auto auto auto auto auto / 1em 1fr;
+  height: 100%;
+  row-gap: 3em;
 }
 /*element1:add new*/
 
 .form__title {
   color: var(--headlinecolor);
-  font-size: 1em;
-  grid-column: 2/3;
+  font-size: 3em;
+  letter-spacing: 0.25em;
 }
+/* ELEMENT ENTER TASK PLACEHOLDER */
+.form__input {
+  font-size: 2.8em;
+  color: var(--secondary-text-color);
+  border: none;
+  border-bottom: solid 4px rgba(52, 45, 47, 0.38);
+  width: 100%;
+}
+
 .form__title:first-child {
   font-size: 2em;
 }
 
-/*enter task - enter field*/
-input[type="text"].form__input {
-  color: var(--secondary-text-color);
+.form__input::placeholder {
+  opacity: 0.37;
+  padding-bottom: 2em;
+}
+
+.form__submit {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--primarycolor);
+  color: var(--alternativetext);
   border: none;
-  border-bottom: solid 4px rgba(52, 45, 47, 0.38);
-  padding: 1em 0;
-  letter-spacing: 0.01em;
-  grid-column: 2/3;
+  font-size: 1.4em;
+  padding: 1.3em 2em;
 }
 
-input[type="text"]::placeholder {
-  color: #393939;
-  opacity: 21%;
-  font-size: 2em;
-  padding: 2em 0;
-}
-
-/* when*/
-h3 {
-  color: var(--headlinecolor);
-  letter-spacing: 0.25em;
-  grid-column: 2/3;
-}
-
-/* radio buttons*/
+/* BLOCK RADIO BUTTON*/
 .radio-group {
   background: rgba(213, 213, 213, 0.1);
-  font-size: 1.3em;
+  font-size: 1em;
   letter-spacing: 0.01em;
-  grid-column: 2/3;
+  display: flex;
+  justify-content: space-around;
+
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
-input[type="radio"] {
-  visibility: hidden;
+.radio-group__input {
+  position: absolute;
+  opacity: 0;
 }
-input[type="radio"] + label {
+
+.radio-group__title {
+  color: var(--headlinecolor);
   cursor: pointer;
+  opacity: 0.8;
 }
-input[type="radio"]:checked + label {
+.radio-group__input:checked + .radio-group__title {
   color: var(--primarycolor);
+}
+.radio-group__input:focus-visible + .radio-group__title {
+  outline: thin solid;
 }
 
 /*add task button*/
